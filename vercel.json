@@ -13,7 +13,7 @@
     ],
     "routes": [
         {
-            "src": "/(.*)",
+            "src": "/backend/(.*)",
             "dest": "src/main.ts",
             "methods": [
                 "GET",
@@ -22,11 +22,11 @@
                 "DELETE"
             ]
         },
-        { "src": "/(.*)", "dest": "frontend/index.html" },
         {
             "src": "/static/(.*)",
             "headers": { "cache-control": "s-maxage=31536000, immutable" },
             "dest": "frontend/static/$1"
-        }
+        },
+        { "src": "/(.*)", "dest": "frontend/index.html" }
     ]
 }
