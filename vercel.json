@@ -23,10 +23,6 @@
             ]
         },
         {
-            "src": "/public/(.*)",
-            "dest": "frontend/assets/$1"
-        },
-        {
             "src": "/assets/(.*)",
             "headers": { "cache-control": "s-maxage=31536000, immutable" },
             "dest": "frontend/assets/$1"
