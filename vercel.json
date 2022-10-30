@@ -6,7 +6,7 @@
             "use": "@vercel/node"
         },
         {
-        "src": "client/package.json",
+        "src": "frontend/package.json",
         "use": "@vercel/static-build",
         "config": { "distDir": "build" }
         }
@@ -22,11 +22,11 @@
                 "DELETE"
             ]
         },
-        { "src": "/(.*)", "dest": "client/index.html" },
+        { "src": "/(.*)", "dest": "frontend/index.html" },
         {
             "src": "/static/(.*)",
             "headers": { "cache-control": "s-maxage=31536000, immutable" },
-            "dest": "client/static/$1"
+            "dest": "frontend/static/$1"
         }
     ]
 }
